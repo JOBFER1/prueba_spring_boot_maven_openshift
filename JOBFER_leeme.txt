@@ -1,0 +1,46 @@
+- Este ejercicio está asociado a esta página:
+https://www.adictosaltrabajo.com/2020/11/03/construye-testea-y-publica-tu-aplicacion-java-con-github-actions/
+
+- Pero no tiene lo mismo que en esa página. Aquí (esta) solo tiene un "hola mundo" y una respuesta REST 
+
+- He conseguido crear un GITHUB PACKAGE en este repositorio:
+JOBFER1/prueba_spring_boot_maven
+ 
+- No he creado los SECRETS en GITHUB y aún así, funciona bien
+
+- Tampoco he añadido el apartado SERVERS al fichero SETTINGS de MAVEN y aún así también funciona bien
+
+- Lo que sí he necesitado, es añadir en el fichero POM el apartado <distributionManagement>
+
+- Sería bueno leer un enlace que hay en esta página sobre almacenamiento de ficheros en caché:
+https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows
+
+- Si descargo el PACKAGE que se ha creado en GITHUB, veo que es un JAR ejecutable, que arranca un servidor 
+tomcat para poder acceder con: localhost:8080
+
+- Tampoco he hecho lo de generar un TOKEN en GITHUB
+Settings > Developer Settings > Personal access tokens
+
+*******************************************************************
+
+. Lo que voy a hacer ahora es DOCKERizar esta app, siguiendo los pasos de:
+https://www.youtube.com/watch?v=--zEFJ6g4lo&ab_channel=4SoftwareDevelopers
+Hay que tener en cuenta que esta app ya está funcionando con Maven y Spring Boot, 
+y está conectada con GitHub
+
+- Para ello, hay que crear un fichero Dockerfile (y así poder crear la imagen Docker y ejecutar
+una instancia de ella)
+
+- En el vídeo dice que en otro vídeo posterior va a explicar Docker Compose, conectando la 
+app a una BD de tipo Postgre
+
+- Lo he conseguido: ejecutar la app en contenedores Docker. No he necesitado hacer nada con GitHub.
+
+- También, aprovecho a conectarla con SonarCoud para ver qué se puede conseguir...
+
+- Después me bajaré el código de ese vídeo e intentaré hacer lo mismo
+https://github.com/4SoftwareDevelopers/demo-crud-spring-boot/tree/develop
+(usa una BD en memoria de tipo H2)
+
+
+
