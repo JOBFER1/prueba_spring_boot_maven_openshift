@@ -37,10 +37,18 @@ app a una BD de tipo Postgre
 - Lo he conseguido: ejecutar la app en contenedores Docker. No he necesitado hacer nada con GitHub.
 
 - También, aprovecho a conectarla con SonarCoud para ver qué se puede conseguir...
+(no probado)
 
 - Después me bajaré el código de ese vídeo e intentaré hacer lo mismo
 https://github.com/4SoftwareDevelopers/demo-crud-spring-boot/tree/develop
-(usa una BD en memoria de tipo H2)
+(usa una BD en memoria de tipo H2 => NO, usa POSGTRE, por eso es imposible que funcione sin 
+usar DOCKER COMPOSER)
 
+
+*******************************************************************
+
+- Este código lo he subido a Heroku manualmente.
+- Tb con despliegues automáticos desde Heroku
+- Tb con GitHub Actions cada vez que se hace push en master
 
 
